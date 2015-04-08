@@ -1,0 +1,61 @@
+﻿<Window x:Name="Window1" x:Class="TCP_Serv_Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="490" Width="541">
+    <Grid x:Name="grid" Loaded="Window1_Loaded">
+        <Button x:Name="StartServ_Btn" Content="Start Server" HorizontalAlignment="Left" Margin="444,45,0,0" VerticalAlignment="Top" Width="75" Click="StartServ_Btn_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FFCDCDCD" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="statusBox_txt" Margin="10,220,10,10" TextWrapping="Wrap" Text="TextBox" AllowDrop="False" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" IsReadOnly="True" TextChanged="statusBox_txt_TextChanged"/>
+        <TextBox x:Name="ServIP_txt" HorizontalAlignment="Left" Height="23" Margin="308,45,0,0" TextWrapping="Wrap" Text="Server IP" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="servPort_txt" HorizontalAlignment="Left" Height="23" Margin="308,82,0,0" TextWrapping="Wrap" Text="20000" VerticalAlignment="Top" Width="120" KeyDown="servPort_txt_KeyDown"/>
+        <Button x:Name="StopServ_Btn" Content="Stop Server" HorizontalAlignment="Left" Margin="444,82,0,0" VerticalAlignment="Top" Width="75" Click="StopServ_Btn_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FFCDCDCD" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="SendStr_Txt" HorizontalAlignment="Left" Height="23" Margin="308,124,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="ClientSendStr_Btn" Content="Send" HorizontalAlignment="Left" Margin="444,124,0,0" VerticalAlignment="Top" Width="75" Click="ClientSendStr_Btn_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FFCDCDCD" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label Content="Send String:" HorizontalAlignment="Left" Margin="229,124,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="filePath_txt" HorizontalAlignment="Left" Height="23" Margin="10,174,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="513"/>
+        <Label Content="Datalog Text FilePath:" HorizontalAlignment="Left" Margin="10,143,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="startUdpListener_Btn" Content="Start UDP Listener" HorizontalAlignment="Left" Margin="31,97,0,0" VerticalAlignment="Top" Width="133" Click="startUdpListener_Btn_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FFCDCDCD" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label Content="Server IP" HorizontalAlignment="Left" Margin="247,45,0,0" VerticalAlignment="Top"/>
+        <Label Content="Listen Port" HorizontalAlignment="Left" Margin="237,82,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="udpPort_txt" HorizontalAlignment="Left" Height="23" Margin="91,53,0,0" TextWrapping="Wrap" Text="514" VerticalAlignment="Top" Width="73" KeyDown="servPort_txt_KeyDown"/>
+        <Label Content="Listen Port" HorizontalAlignment="Left" Margin="20,53,0,0" VerticalAlignment="Top"/>
+        <Label Content="UDP" HorizontalAlignment="Left" Margin="76,6,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="TCP" HorizontalAlignment="Left" Margin="365,6,0,0" VerticalAlignment="Top" FontSize="16"/>
+
+    </Grid>
+</Window>
